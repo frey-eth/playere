@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:playere/pages/phonenumber_page.dart';
+import 'package:playere/pages/auth_page.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class StartPage extends StatefulWidget {
+  const StartPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<StartPage> createState() => _StartPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _StartPageState extends State<StartPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -57,18 +57,16 @@ class _LoginPageState extends State<LoginPage> {
             'Tap to start playere!',
             style: TextStyle(
                 fontSize: 14,
-                color: Color.fromARGB(255, 122, 121, 121),
-                decoration: TextDecoration.none),
+                color: Color.fromARGB(255, 182, 182, 182),
+                decoration: TextDecoration.none,
+                fontWeight: FontWeight.bold),
           ),
           SizedBox(
             height: 50,
           ),
           ElevatedButton(
-            onPressed: () => Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (context) =>
-                  PhoneNumberPage())),
+            onPressed: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) =>AuthPage())),
             style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.transparent, elevation: 0),
             child: Image.asset(
@@ -78,7 +76,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           SizedBox(
-            height: 30,
+            height: 40,
           ),
           Text(
             '©2023 Playere. All rights reserved.',
